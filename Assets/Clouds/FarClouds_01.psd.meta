@@ -1,0 +1,1420 @@
+fileFormatVersion: 2
+guid: f2bfe165acf070a48947e24c8fc7c4c6
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FarClouds_01_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 239
+        width: 61
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f988e4e4a570a544c8304600fed14f01
+      internalID: -644835702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_1
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 239
+        width: 50
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8bfee2fe3019ec40889dc76a85fe3cb
+      internalID: 306696613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 242
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e3f2f770d231c4f86477ed4765b897
+      internalID: -535589046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_3
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 242
+        width: 50
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 496bb92ecf2db6b4e8c61bc2f98ea132
+      internalID: -532795647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_4
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 241
+        width: 42
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e3ba112c84a10a44a2ead34b1cb56af
+      internalID: -1501528778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_5
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 240
+        width: 37
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61f4380ec5d69f40b1d10da9a45a213
+      internalID: 1150301403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_6
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 241
+        width: 45
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ff72610ac08024c9bd72345a2a20d5
+      internalID: -1906474441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_7
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 242
+        width: 36
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1df93b9ce81ccf84a8eb87d9ddaa5c82
+      internalID: -2097390076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_8
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 239
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32553a8d52c11334cb38f4ad49faab5d
+      internalID: -1639321062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_9
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 239
+        width: 39
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b44123dfbd66b4439abe2102d3aedbc
+      internalID: 1169109683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210
+        width: 53
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b8fe2f66840d74ba54be823cf012e5
+      internalID: -1306830096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_11
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 212
+        width: 36
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dec2492a34693b4aa08ba3eedf5564f
+      internalID: -1572252050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_12
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 208
+        width: 47
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5046ce54cdcf66040bdbbb8a1996fc19
+      internalID: -1496978780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_13
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 210
+        width: 53
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 519e710823b2e1f449b252fa0d5da5f7
+      internalID: -113508249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_14
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 208
+        width: 47
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc72fda36291de428363652ab01ad27
+      internalID: -1758458392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_15
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 209
+        width: 43
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97de86287bdf9154c8751cd7808fd7e8
+      internalID: 13463846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_16
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 213
+        width: 52
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91548a7607885ce4abbd09593aef9bcf
+      internalID: -1173893204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_17
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 210
+        width: 58
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8b28f0c78d53d44b91c94506e04a62
+      internalID: 1228098667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_18
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 214
+        width: 33
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c56fd3cbb551d041a3f7b120b083627
+      internalID: 1089132131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_19
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 179
+        width: 43
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c45f40c332df8489c8c93dd3c1dd41
+      internalID: -1785087492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_20
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 176
+        width: 38
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 095a62cf8118b614ab31379137e26d33
+      internalID: 2018496665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_21
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 180
+        width: 39
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a85ef45bc08f4749a9e16bf13c1635a
+      internalID: -1202848332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_22
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 180
+        width: 47
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4291b49753d97234ca6d739003aa7e43
+      internalID: -2125865475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_23
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 180
+        width: 52
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a244348cd47cc0a4eb9a1f6bc2c59835
+      internalID: -459302315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_24
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 184
+        width: 51
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f6c7185ace37744997b68b18627599
+      internalID: -1633198689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_25
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 177
+        width: 57
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4566ff796d2e1f3489078f4cf60b2429
+      internalID: 1991996197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_26
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 180
+        width: 54
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa10f03ac1a476644809fa30de259baf
+      internalID: 1420448343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_27
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 178
+        width: 38
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d6bf1e3f23c9444b3e6a981312eee1
+      internalID: -562534808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_28
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 148
+        width: 41
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c7efed55f58ac54fb864ddfc22e2c8c
+      internalID: 654189850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_29
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 145
+        width: 43
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44c3ac2bbd1c1494f9037798b3d2b1d1
+      internalID: 1954545911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_30
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 147
+        width: 60
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9740305b086c63c4ea653a76dec56441
+      internalID: 1036232174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_31
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 148
+        width: 56
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5adcb4111be883d49a94ec54d4e0e397
+      internalID: 1733307304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_32
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 144
+        width: 50
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5856562cc6dca344d8aeb314751e3a18
+      internalID: -213345501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_33
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 145
+        width: 67
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84b7f1092233d1438efef8b6c6efcb3
+      internalID: -658135604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_34
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 145
+        width: 68
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8336689cc31f3946b912f8631cf310f
+      internalID: -1528544217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_35
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 147
+        width: 63
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b5add31932bf5b48982d41356e1d1c0
+      internalID: -1005561649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_36
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 117
+        width: 46
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180793f07c35ad644a2b7c9d3ee1e8e1
+      internalID: -1397626803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_37
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 115
+        width: 67
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f13fb7d5699044ea24a8628d8f8377
+      internalID: 1043464979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_38
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 113
+        width: 66
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ddb6b29bf3cbd4d8c19715a81d6ff0
+      internalID: -463964349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_39
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 113
+        width: 74
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72678767614d2b0409f71c243bc95e99
+      internalID: 73150966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_40
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 114
+        width: 60
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d69d52abf293d47ba27847243bbc77
+      internalID: 673461035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_41
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 112
+        width: 65
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5d7308638ed51e4d814d581837e7cea
+      internalID: 1409010856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_42
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 116
+        width: 61
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 892a86b899ea178419d0f354178773ff
+      internalID: -1866834179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_43
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 84
+        width: 56
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59e7ad4d840b93e4d899ca8d67492598
+      internalID: -11824994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_44
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 81
+        width: 68
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d6269f73dabe314e9369f3ac2a76990
+      internalID: 149311662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_45
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 81
+        width: 73
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a638e3e4dc844d0429f5a3b4857bfc21
+      internalID: -1988035099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_46
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 83
+        width: 56
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da539ca65fc0b18459e56f5d9da185ad
+      internalID: -501901796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_47
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 86
+        width: 53
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed06d385d64d08643b6249419bc910e6
+      internalID: -30933035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_48
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 84
+        width: 68
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11a671e09cc35d4183e174a9f78cd1d
+      internalID: -984954006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_49
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 84
+        width: 77
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd74ebc89877614c949e241d90f89e9
+      internalID: 1301260148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_50
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 48
+        width: 111
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fee08077caeb1743b3604623b6948e9
+      internalID: -502677525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_51
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 50
+        width: 95
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a81f5475f36d1d04091ea4890046e8f2
+      internalID: -1500260363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_52
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 50
+        width: 138
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28f61b91f31445a499667364ce3d78d1
+      internalID: -1142766604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_53
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 51
+        width: 115
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a043262ae65e212409d97f0a67dc928f
+      internalID: -565000182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_54
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 19
+        width: 75
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f18619f8d0b3b4699d453a93dc33d8
+      internalID: 974293632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_55
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 18
+        width: 88
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460a6021372419c4d9f5d242ac0a0764
+      internalID: -2101331676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_56
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 18
+        width: 80
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60863e0d9f7bf574aa37c705020c80e2
+      internalID: -592066483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_57
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 15
+        width: 95
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e21a891269d93469e772510cb73eb9
+      internalID: -2079715874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarClouds_01_58
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 16
+        width: 116
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e75be460850541940807b2482fb04380
+      internalID: -62751076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      FarClouds_01_13: -113508249
+      FarClouds_01_40: 673461035
+      FarClouds_01_46: -501901796
+      FarClouds_01_1: 306696613
+      FarClouds_01_16: -1173893204
+      FarClouds_01_48: -984954006
+      FarClouds_01_21: -1202848332
+      FarClouds_01_12: -1496978780
+      FarClouds_01_25: 1991996197
+      FarClouds_01_32: -213345501
+      FarClouds_01_30: 1036232174
+      FarClouds_01_10: -1306830096
+      FarClouds_01_26: 1420448343
+      FarClouds_01_34: -1528544217
+      FarClouds_01_7: -2097390076
+      FarClouds_01_36: -1397626803
+      FarClouds_01_47: -30933035
+      FarClouds_01_56: -592066483
+      FarClouds_01_43: -11824994
+      FarClouds_01_2: -535589046
+      FarClouds_01_5: 1150301403
+      FarClouds_01_38: -463964349
+      FarClouds_01_39: 73150966
+      FarClouds_01_20: 2018496665
+      FarClouds_01_42: -1866834179
+      FarClouds_01_8: -1639321062
+      FarClouds_01_35: -1005561649
+      FarClouds_01_9: 1169109683
+      FarClouds_01_45: -1988035099
+      FarClouds_01_49: 1301260148
+      FarClouds_01_6: -1906474441
+      FarClouds_01_58: -62751076
+      FarClouds_01_23: -459302315
+      FarClouds_01_11: -1572252050
+      FarClouds_01_27: -562534808
+      FarClouds_01_52: -1142766604
+      FarClouds_01_19: -1785087492
+      FarClouds_01_14: -1758458392
+      FarClouds_01_24: -1633198689
+      FarClouds_01_37: 1043464979
+      FarClouds_01_15: 13463846
+      FarClouds_01_50: -502677525
+      FarClouds_01_51: -1500260363
+      FarClouds_01_28: 654189850
+      FarClouds_01_33: -658135604
+      FarClouds_01_53: -565000182
+      FarClouds_01_44: 149311662
+      FarClouds_01_41: 1409010856
+      FarClouds_01_0: -644835702
+      FarClouds_01_3: -532795647
+      FarClouds_01_18: 1089132131
+      FarClouds_01_29: 1954545911
+      FarClouds_01_57: -2079715874
+      FarClouds_01_4: -1501528778
+      FarClouds_01_17: 1228098667
+      FarClouds_01_31: 1733307304
+      FarClouds_01_55: -2101331676
+      FarClouds_01_54: 974293632
+      FarClouds_01_22: -2125865475
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
