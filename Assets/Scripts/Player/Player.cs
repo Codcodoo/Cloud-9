@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public GameObject hammer;//hammer ability
     public GameObject drop;//shot
     public GameObject cloudfx;//hitting clouds effect
-    public GameObject oncloudfx;
+    public GameObject oncloudfx;//constant effect on cloud
     public GameObject gunshot;//gun sound
     public GameManager gm;//game manager
     public Sprite tanksprite;//tank sprite
@@ -24,32 +24,33 @@ public class Player : MonoBehaviour
     public GameObject[] ammoind = new GameObject[3];
     Rigidbody2D rb;//player rb
     Vector2 dir;//direction vector
-    public float shotforce = 10;//shot power
-    public float recoil = 4;//recoil power
-    public float loadingtime = 0.7f;//loading time
-    public float ammomax = 2;//amount of ammo
+    public float shotforce;//shot power
+    public float recoil;//recoil power
+    public float loadingtime;//loading time
+    public float ammomax;//amount of ammo
     public float ammo;
+    public float gravityOutCloud;
     bool loaded = true;//loading time is over
     bool gun = false;//has gun
     bool frozen = false;//player resisting recoil
     bool incloud = false;
     bool slide = false;
     void Start()
-    {
+    { 
         ammo = 1;
         rb = GetComponent<Rigidbody2D>();//getting rigidbody
         rb.velocity = new Vector2(0, 0.5f);//floating up
         hammer.SetActive(false);//disable hammer by default
     }
-    void FixedUpdate()
-    {
-        Aim();
-        Hammer();
+    void Update()
+    {  
+        Aim();//aiming the cannon by rotating the center
+        Hammer();//using the hammer
         dir = (crewpride.transform.position - center.transform.position).normalized;//direction
-        Shoot(dir);
-        RecoilFreeze();
+        Shoot(dir);//shooting
+        RecoilFreeze();//freezing
         //Slide();
-        if (incloud)
+        if (incloud)//wasd movement that we should remove
         {
             if (Input.GetKey(KeyCode.W))
             {
@@ -72,11 +73,21 @@ public class Player : MonoBehaviour
 
     public void Aim()
     {
-        Vector3 mousePos = Input.mousePosition;
-        Vector3 relPos = Camera.main.ScreenToWorldPoint(mousePos);
-        Vector2 direction = relPos - center.transform.position;
-        float angle = Vector2.SignedAngle(Vector2.up, direction);
-        center.transform.eulerAngles = new Vector3(0, 0, angle);
+        //Vector3 mousePos = Input.mousePosition;//position of the mouse
+        //Vector3 relPos = Camera.main.ScreenToWorldPoint(mousePos);//position of the mouse rellative to camera
+        //Vector2 direction = relPos - center.transform.position;//aim direction
+        //float angle = Vector2.SignedAngle(Vector2.up, direction);//angle of rotation changes accordingly
+        //center.transform.eulerAngles = new Vector3(0, 0, angle);//rotating the center
+
+        //Arrow rotation that we might want to use for reasons
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            center.transform.Rotate(0, 0, -400 * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            center.transform.Rotate(0, 0, 400 * Time.deltaTime);
+        }
     }
     public void Hammer()
     {
@@ -92,28 +103,38 @@ public class Player : MonoBehaviour
 
     void Shoot(Vector2 dir)//shooting function
     {
-        if ((Input.GetKey(KeyCode.Space)||Input.GetKey(KeyCode.Mouse0)) && loaded && ammo > 0 && !hammer.activeSelf)//shooting
+        if (Input.GetMouseButton(0)||Input.GetKey(KeyCode.Space))
         {
-            GameObject shot = Instantiate(drop, crewpride.transform.position, Quaternion.Euler(center.transform.rotation.x, center.transform.rotation.x, center.transform.rotation.z + 45));
-            Rigidbody2D shotrb = shot.GetComponent<Rigidbody2D>();
-            shotrb.velocity = dir * shotforce;
-            StartCoroutine(Load());
-            if (!frozen)
+            slide = true;//sliding while in cloud
+            
+            if (Input.GetKeyDown(KeyCode.Space)&&loaded && ammo > 0 && !hammer.activeSelf)//shooting
             {
-                rb.velocity = new Vector2(0, 0);
-                rb.AddForce(-dir * recoil);
+                GameObject shot = Instantiate(drop, crewpride.transform.position, Quaternion.Euler(center.transform.rotation.x, center.transform.rotation.x, center.transform.rotation.z + 45));
+                Rigidbody2D shotrb = shot.GetComponent<Rigidbody2D>();
+                shotrb.velocity = dir * shotforce;
+                StartCoroutine(Load());
+                if (!frozen)
+                {
+                    rb.velocity = new Vector2(0, 0);//shot reset
+                    rb.AddForce(-dir * recoil);//shot moving
+                }
+                else
+                {
+                    StartCoroutine(Freeze());
+                }
+                Instantiate(gunshot, crewpride.transform.position, center.transform.rotation);
+                if (!incloud)
+                {
+                    ammo--;
+                }
+                CheckAmmo();
             }
-            else
-            {
-                StartCoroutine(Freeze());
-            }
-            Instantiate(gunshot, crewpride.transform.position, center.transform.rotation);
-            if (!incloud)
-            {
-                ammo--;
-            }
-            CheckAmmo();
         }
+        else
+        {
+            slide = false;
+        }
+       
     }
 
     //public void Slide()
@@ -210,10 +231,10 @@ public class Player : MonoBehaviour
             case "hurt":
                 gm.Restart(); //die
                 break;
-            case "Platform":
-                rb.gravityScale = 0;
-                rb.drag = 3;
-                break;
+            //case "Platform":
+            //    rb.gravityScale = 0;
+            //    rb.drag = 3;
+            //    break;
             default:
                 break;
         }
@@ -240,7 +261,7 @@ public class Player : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.transform.tag == "Platform"){
-            rb.gravityScale = 3f;
+            rb.gravityScale = gravityOutCloud;
             rb.drag = 0;//drag in air
             //oncloudfx.SetActive(false);
             StartCoroutine(Drift());
