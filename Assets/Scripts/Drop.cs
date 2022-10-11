@@ -1,45 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Drop : MonoBehaviour
 {
     public GameObject rainfx;
-    public float range=1;
+    public static float ShotLife = 1;
+    public static float accelerate = 0;
     //public GameObject explode;
     //public ParticleSystem ps;
-    GameObject player;
     float sizemult = 1;
     float hammerbounus = 0;
-    Vector2 startpos;
-    Vector2 pos;
+    float timer = 0;
+    Vector2 velStart;
     // Start is called before the first frame update
     void Start()
     {
-        startpos = this.transform.position;
-        player = GameObject.FindGameObjectWithTag("Player");
+        velStart = this.GetComponent<Rigidbody2D>().velocity;
         StartCoroutine(Delete());
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        pos = this.transform.position;
-        if (Vector2.Distance(pos,startpos)>range)
-        {
-            //ps.Stop();
-            //ps.Play();
-            //GameObject ps = Instantiate(explode, this.transform);
-            //ps.transform.parent = GameObject.FindGameObjectWithTag("Player").transform;
-            Destroy(gameObject);
-        }
-        sizemult =hammerbounus + 0.5f + Mathf.Sin(Time.time*5)/15;
+        sizemult = hammerbounus + 0.5f + Mathf.Sin(Time.time * 5) / 15;
         this.transform.localScale = new Vector3(sizemult, sizemult, sizemult);
+        Acceleration();
+        timer += Time.deltaTime;
     }
+
+    public void Acceleration()
+    {
+        Rigidbody2D rb = this.GetComponent<Rigidbody2D>();
+        rb.velocity = Vector2.Lerp(velStart, velStart * accelerate,  timer/ShotLife);
+    }
+
     IEnumerator Delete()
     {
-      // GameObject fx = Instantiate(rainfx,this.transform.position, Quaternion.Euler(player.GetComponent<Player>().GunDir().x, player.GetComponent<Player>().GunDir().y, 0));
-        yield return new WaitForSeconds(3);
+        // GameObject fx = Instantiate(rainfx,this.transform.position, Quaternion.Euler(player.GetComponent<Player>().GunDir().x, player.GetComponent<Player>().GunDir().y, 0));
+        yield return new WaitForSeconds(ShotLife);
        // Destroy(fx);
         Destroy(gameObject);
     }

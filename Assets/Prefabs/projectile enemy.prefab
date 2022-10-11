@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3030829381586437721}
   - component: {fileID: -8205543351845229962}
   - component: {fileID: 1911783130567355355}
-  - component: {fileID: 3156836690972067865}
   - component: {fileID: 183846589343013745}
   - component: {fileID: -7450150236647007942}
-  m_Layer: 0
+  - component: {fileID: -3190209630646669620}
+  m_Layer: 2
   m_Name: projectile enemy
   m_TagString: hurt
   m_Icon: {fileID: 0}
@@ -126,20 +126,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3156836690972067865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5354861560068371432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc138e3592f97cf4bacc67ac0b288edd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rainfx: {fileID: 7380623844192630533, guid: 1f50c84a9e89f374592c4bf263a6e934, type: 3}
-  range: 10
 --- !u!114 &183846589343013745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,6 +150,7 @@ MonoBehaviour:
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
@@ -220,7 +207,7 @@ MonoBehaviour:
   - {x: -0.5, y: 0.5, z: 0}
 --- !u!96 &-7450150236647007942
 TrailRenderer:
-  serializedVersion: 2
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -321,8 +308,24 @@ TrailRenderer:
     numCapVertices: 0
     alignment: 0
     textureMode: 0
+    textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
   m_MinVertexDistance: 0.1
+  m_MaskInteraction: 0
   m_Autodestruct: 0
   m_Emitting: 1
+  m_ApplyActiveColorSpace: 0
+--- !u!114 &-3190209630646669620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5354861560068371432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc138e3592f97cf4bacc67ac0b288edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rainfx: {fileID: 0}

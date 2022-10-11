@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public GameObject hammer;//hammer ability
     public GameObject drop;//shot
     public GameObject cloudfx;//hitting clouds effect
-    public GameObject oncloudfx;//constant effect on cloud
+    public GameObject oncloudfx;
     public GameObject gunshot;//gun sound
     public GameManager gm;//game manager
     public Sprite tanksprite;//tank sprite
@@ -23,34 +23,38 @@ public class Player : MonoBehaviour
     public PhysicsMaterial2D tphm;// tank physics material
     public GameObject[] ammoind = new GameObject[3];
     Rigidbody2D rb;//player rb
-    Vector2 dir;//direction vector
-    public float shotforce;//shot power
-    public float recoil;//recoil power
-    public float loadingtime;//loading time
-    public float ammomax;//amount of ammo
+    public Vector2 dir;//direction vector
+    public float shotforce = 10;//shot power
+    public float recoil = 4;//recoil power
+    public float loadingtime = 0.7f;//loading time
+    public float ammomax = 2;//amount of ammo
     public float ammo;
-    public float gravityOutCloud;
+    public float TimeBetweenShots; // when you have more than one shot the time between one to another
+    public int NumOfShots; // num of shots fired at the same time
     bool loaded = true;//loading time is over
     bool gun = false;//has gun
     bool frozen = false;//player resisting recoil
     bool incloud = false;
     bool slide = false;
+    //float defTraverseSpeed = 200;
+    //float traverseSpeedRight = -200;
+    //float traverseSpeedLeft = 200;
     void Start()
-    { 
+    {
         ammo = 1;
         rb = GetComponent<Rigidbody2D>();//getting rigidbody
         rb.velocity = new Vector2(0, 0.5f);//floating up
         hammer.SetActive(false);//disable hammer by default
     }
-    void Update()
-    {  
-        Aim();//aiming the cannon by rotating the center
-        Hammer();//using the hammer
+    void FixedUpdate()
+    {
+        Aim();
+        Hammer();
         dir = (crewpride.transform.position - center.transform.position).normalized;//direction
-        Shoot(dir);//shooting
-        RecoilFreeze();//freezing
+        Shoot();
+        RecoilFreeze();
         //Slide();
-        if (incloud)//wasd movement that we should remove
+        if (incloud)
         {
             if (Input.GetKey(KeyCode.W))
             {
@@ -73,21 +77,40 @@ public class Player : MonoBehaviour
 
     public void Aim()
     {
-        //Vector3 mousePos = Input.mousePosition;//position of the mouse
-        //Vector3 relPos = Camera.main.ScreenToWorldPoint(mousePos);//position of the mouse rellative to camera
-        //Vector2 direction = relPos - center.transform.position;//aim direction
-        //float angle = Vector2.SignedAngle(Vector2.up, direction);//angle of rotation changes accordingly
-        //center.transform.eulerAngles = new Vector3(0, 0, angle);//rotating the center
+        Vector3 mousePos = Input.mousePosition;
+        Vector3 relPos = Camera.main.ScreenToWorldPoint(mousePos);
+        Vector2 direction = relPos - center.transform.position;
+        float angle = Vector2.SignedAngle(Vector2.up, direction);
+        center.transform.eulerAngles = new Vector3(0, 0, angle);
 
-        //Arrow rotation that we might want to use for reasons
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            center.transform.Rotate(0, 0, -400 * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            center.transform.Rotate(0, 0, 400 * Time.deltaTime);
-        }
+        //if (Input.GetKey(KeyCode.RightArrow))
+        //{
+        //    if (traverseSpeedRight > -600)
+        //    {
+        //        traverseSpeedRight -= Time.deltaTime * 400;
+        //    }
+        //    traverseSpeedLeft = defTraverseSpeed;
+        //    center.transform.Rotate(0, 0, traverseSpeedRight * Time.deltaTime);
+        //    Debug.Log(traverseSpeedRight);
+        //}
+        //else
+        //{
+        //    traverseSpeedRight = -defTraverseSpeed;
+        //}
+        //if (Input.GetKey(KeyCode.LeftArrow))
+        //{
+        //    if (traverseSpeedLeft < 600)
+        //    {
+        //        traverseSpeedLeft += Time.deltaTime * 400;
+        //    }
+        //    traverseSpeedRight = -defTraverseSpeed;
+        //    center.transform.Rotate(0, 0, traverseSpeedLeft * Time.deltaTime);
+        //    Debug.Log(traverseSpeedLeft);
+        //}
+        //else
+        //{
+        //    traverseSpeedLeft = defTraverseSpeed;
+        //}
     }
     public void Hammer()
     {
@@ -101,53 +124,13 @@ public class Player : MonoBehaviour
         }
     }
 
-    void Shoot(Vector2 dir)//shooting function
+    void Shoot()//shooting function
     {
-        if (Input.GetMouseButton(0)||Input.GetKey(KeyCode.Space))
+        if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Mouse0)) && loaded && ammo > 0 && !hammer.activeSelf)//shooting
         {
-            slide = true;//sliding while in cloud
-            
-            if (Input.GetKeyDown(KeyCode.Space)&&loaded && ammo > 0 && !hammer.activeSelf)//shooting
-            {
-                GameObject shot = Instantiate(drop, crewpride.transform.position, Quaternion.Euler(center.transform.rotation.x, center.transform.rotation.x, center.transform.rotation.z + 45));
-                Rigidbody2D shotrb = shot.GetComponent<Rigidbody2D>();
-                shotrb.velocity = dir * shotforce;
-                StartCoroutine(Load());
-                if (!frozen)
-                {
-                    rb.velocity = new Vector2(0, 0);//shot reset
-                    rb.AddForce(-dir * recoil);//shot moving
-                }
-                else
-                {
-                    StartCoroutine(Freeze());
-                }
-                Instantiate(gunshot, crewpride.transform.position, center.transform.rotation);
-                if (!incloud)
-                {
-                    ammo--;
-                }
-                CheckAmmo();
-            }
+            StartCoroutine(NumOfShotsLag());
         }
-        else
-        {
-            slide = false;
-        }
-       
     }
-
-    //public void Slide()
-    //{
-    //    if (Input.GetKey(KeyCode.C))
-    //    {
-    //        slide = true;
-    //    }
-    //    else
-    //    {
-    //        slide = false;
-    //    }
-    //}
 
     public void RecoilFreeze()
     {
@@ -175,12 +158,12 @@ public class Player : MonoBehaviour
             playerCollider.enabled = true;
         }
     }
-   public void CheckAmmo()
+    public void CheckAmmo()
     {
-        
+
         for (int i = 0; i < ammoind.Length; i++)
         {
-            if(i<ammo)
+            if (i < ammo)
             {
                 ammoind[i].SetActive(true);
             }
@@ -190,21 +173,68 @@ public class Player : MonoBehaviour
             }
         }
     }
-   
+
+    /*public void Agony()
+    {
+        Collider2D[] enemysClose = Physics2D.OverlapCircleAll(this.transform.position, 3);
+        foreach (Collider2D e in enemysClose)
+        {
+            //e.GetComponent<Enemy>().Hurt();
+
+            //Vector2 edir = e.transform.position - this.transform.position;
+            //edir.Normalize();
+            //edir *= 500;
+            //e.GetComponent<Rigidbody2D>().AddForce(edir);
+
+            //screenshake
+            //draw lightning explotion
+            //draw shockwave
+            Debug.Log(e.name);
+        }
+    }*/
+
+    IEnumerator NumOfShotsLag()
+    {
+        for (int i = 0; i < NumOfShots; i++)
+        {
+            GameObject shot = Instantiate(drop, crewpride.transform.position, Quaternion.Euler(center.transform.rotation.x, center.transform.rotation.x, center.transform.rotation.z + 45));
+            Rigidbody2D shotrb = shot.GetComponent<Rigidbody2D>();
+            shotrb.velocity = dir * shotforce;
+            loaded = false;
+            if (!frozen)
+            {
+                rb.velocity = new Vector2(0, 0);
+                rb.AddForce(-dir * recoil);
+            }
+            else
+            {
+                StartCoroutine(Freeze());
+            }
+            Instantiate(gunshot, crewpride.transform.position, center.transform.rotation);
+            if (!incloud)
+            {
+                ammo--;
+            }
+            CheckAmmo();
+            yield return new WaitForSeconds(TimeBetweenShots);
+        }
+        StartCoroutine(Load());
+
+    }
+
     IEnumerator Load()//load gun
     {
-        loaded = false;
         yield return new WaitForSeconds(loadingtime);
         StartCoroutine(Playsound(loadedsound, this.transform));
         loaded = true;
     }
-    IEnumerator Playsound(GameObject sound,Transform transform)//play and delete sound
+    IEnumerator Playsound(GameObject sound, Transform transform)//play and delete sound
     {
         GameObject soundeffect = Instantiate(sound, transform);
         yield return new WaitForSeconds(3);
         Destroy(soundeffect);
     }
- 
+
     IEnumerator Freeze()//switch sprites of freeze
     {
         this.GetComponent<SpriteRenderer>().sprite = tankspritefreeze;
@@ -218,7 +248,65 @@ public class Player : MonoBehaviour
         incloud = false;
 
     }
- 
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        switch (collision.transform.tag)
+        {
+
+            case "hurt":
+                gm.Restart(); //die
+                break;
+            case "Floor":
+                ammo = ammomax;
+                CheckAmmo();
+                break;
+            default:
+                break;
+        }
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        switch (collision.transform.tag)
+        {
+
+            case "hurt":
+                gm.Restart(); //die
+                break;
+            //case "Platform":
+            //    rb.gravityScale = 0;
+            //    rb.drag = 3;
+            //    break;
+
+            case "Platform":
+                ammo = ammomax;
+                CheckAmmo();
+                rb.gravityScale = 0;
+                if (slide)
+                {
+                    rb.drag = 0;
+                }
+                else
+                {
+                    rb.drag = 3;
+                }
+                incloud = true;
+                break;
+            case "Floor":
+                ammo = ammomax;
+                CheckAmmo();
+                break;
+            default:
+                break;
+
+        }
+        incloud = true;
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        incloud = false;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)//triggering
     {
 
@@ -231,10 +319,10 @@ public class Player : MonoBehaviour
             case "hurt":
                 gm.Restart(); //die
                 break;
-            //case "Platform":
-            //    rb.gravityScale = 0;
-            //    rb.drag = 3;
-            //    break;
+            case "Platform":
+                rb.gravityScale = 0;
+                rb.drag = 3;
+                break;
             default:
                 break;
         }
@@ -260,13 +348,14 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.transform.tag == "Platform"){
-            rb.gravityScale = gravityOutCloud;
-            rb.drag = 0;//drag in air
+        if (collision.transform.tag == "Platform")
+        {
+            rb.gravityScale = 3f;
+            rb.drag = 1;//drag in air
             //oncloudfx.SetActive(false);
             StartCoroutine(Drift());
         }
     }
-    public bool HasGun(){return gun; }//check if player got the gun
-    public Vector2 GunDir(){return dir;}
+    public bool HasGun() { return gun; }//check if player got the gun
+    public Vector2 GunDir() { return dir; }
 }
